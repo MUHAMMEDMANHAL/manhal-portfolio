@@ -1,13 +1,12 @@
-
- html {
+html {
   scroll-behavior: smooth;
 }
 
 * {
-  font-family: system-ui, sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: system-ui, sans-serif;
 }
 
 body {
@@ -17,7 +16,7 @@ body {
   min-height: 100vh;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 header {
   background: #333;
   color: #fff;
@@ -36,8 +35,7 @@ header {
 }
 
 .logo h1 {
-  font-size: 22px;
-  margin: 0;
+  font-size: 20px;
 }
 
 .logo p {
@@ -45,9 +43,14 @@ header {
   color: #ccc;
 }
 
+/* NAVBAR */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
 nav a {
   color: #fff;
-  margin-left: 20px;
   text-decoration: none;
   font-size: 14px;
   transition: 0.3s;
@@ -57,7 +60,14 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* ================= SECTIONS ================= */
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* MAIN CONTENT */
 .container {
   max-width: 1140px;
   margin: 100px auto 50px;
@@ -69,6 +79,7 @@ section {
   border-radius: 12px;
   padding: 25px;
   margin-bottom: 30px;
+  scroll-margin-top: 100px;
 }
 
 section h2 {
@@ -78,7 +89,7 @@ section h2 {
   margin-bottom: 20px;
 }
 
-/* ================= ABOUT ================= */
+/* ABOUT */
 .about-content {
   display: flex;
   flex-wrap: wrap;
@@ -89,7 +100,7 @@ section h2 {
 .aboutimage {
   width: 280px;
   border-radius: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.4s ease;
 }
 
@@ -97,13 +108,12 @@ section h2 {
   transform: scale(1.05);
 }
 
-/* ================= SKILLS ================= */
+/* SKILLS */
 .skill-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  text-align: center;
 }
 
 .skill-content img {
@@ -136,11 +146,7 @@ section h2 {
   background: #999;
 }
 
-/* ================= PROJECTS ================= */
-#projects {
-  border-radius: 20px;
-}
-
+/* PROJECTS */
 .project {
   display: flex;
   flex-direction: column;
@@ -160,7 +166,7 @@ section h2 {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* ================= CONTACT ================= */
+/* CONTACT */
 .contact-form {
   max-width: 400px;
   margin: 20px auto;
@@ -168,19 +174,6 @@ section h2 {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   padding: 20px;
-}
-
-.contact-form h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.contact-form .form-control {
-  font-size: 14px;
-}
-
-.contact-form button {
-  width: 100%;
 }
 
 .social-links {
@@ -199,7 +192,7 @@ section h2 {
   transform: scale(1.1);
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer {
   background: #fff;
   color: #000;
@@ -210,35 +203,38 @@ footer {
   font-size: 16px;
 }
 
-/* ================= MEDIA QUERIES ================= */
+/* ================= RESPONSIVE ================= */
 
 /* Tablets */
 @media (max-width: 992px) {
-  .logo h1 {
-    font-size: 20px;
-  }
-  .container {
-    margin-top: 120px;
-  }
   .pro {
     width: 90%;
   }
 }
 
-/* Mobile Devices */
+/* Mobile */
 @media (max-width: 768px) {
-  header {
-    text-align: center;
+  .menu-toggle {
+    display: block;
   }
-  .header-content {
-    flex-direction: column;
-  }
+
   nav {
-    margin-top: 10px;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #444;
+    text-align: center;
+    border-radius: 8px;
   }
+
+  nav.active {
+    display: flex;
+  }
+
   nav a {
-    display: inline-block;
-    margin: 8px;
+    padding: 10px;
+    font-size: 16px;
+    border-top: 1px solid #555;
   }
 
   .about-content {
@@ -269,17 +265,8 @@ footer {
     font-size: 18px;
   }
 
-  nav a {
-    font-size: 13px;
-  }
-
   section h2 {
     font-size: 26px;
-  }
-
-  .about-content p,
-  .skill-content li {
-    font-size: 14px;
   }
 
   .skill-content img {
@@ -290,4 +277,3 @@ footer {
     font-size: 20px;
   }
 }
-
