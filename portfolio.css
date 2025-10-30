@@ -1,0 +1,287 @@
+ 
+html{
+  scroll-behavior: smooth;
+}
+ #projects {
+  border-radius: 40px;
+  background:white;
+  padding: 20px;
+  
+}
+.pro {
+  width: 75%;
+  height: 20%;
+  border-radius: 5%;
+  transition: transform 0.4s ease, box-shadow 0.4s ease; 
+  cursor: pointer; 
+}
+
+.pro:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+}
+
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  gap: 10px;
+  text-align: center;
+    
+}
+
+.project h3 {
+  margin: 0;
+  color: black;
+  font-size: 20px;
+}
+
+.project p {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+
+
+* {
+  font-family: system-ui;
+  font-size: 25px;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f0a0a;
+  color: #131212;
+  margin: 0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  background-image: url("/back\ img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  
+}
+
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  position: fixed;       
+  top: 0;                
+  width: 100%;           
+  z-index: 1000;       
+}
+
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  margin: 4px 0;
+  font-size: 20px;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 12px;
+  color: #ddd;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+section {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+section h2 {
+  text-align: center;
+  margin-top: 0;
+  color: black;
+}
+
+#about,
+#skills,
+#projects,
+#contact {
+  border-radius: 40px;
+  
+  
+}
+
+.about-content,
+.skill-content,
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  position: static;
+}
+
+.aboutimage,
+.skill-content img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  
+}
+.aboutimage:hover{
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+  box-shadow: px 100px 100px rgba(96, 16, 172, 0.3); 
+}
+
+.skill-content img:hover{
+  background-color: white;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+
+.about-content p,
+.skill-content ul {
+  flex: 1;
+  font-size: 18px;
+  
+}
+.skill-content li:hover{
+  background-color: #999090;
+}
+
+.skill-content ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-left: 0;
+}
+
+.skill-content ul li {
+  background: #ddd;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.project ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.project li {
+  margin-bottom: 5px;
+}
+
+.social-links {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.social-links img.logoImg {
+  width: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social-links img.logoImg:hover {
+  transform: scale(1.1);
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: 20px auto;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-form .form-control {
+  font-size: 14px;
+}
+
+.contact-form button {
+  width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .about-content,
+  .skill-content,
+  .project {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content p,
+  .skill-content ul {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo h1 {
+    font-size: 16px;
+  }
+
+  .logo p {
+    font-size: 10px;
+  }
+
+  .about-content p,
+  .skill-content ul {
+    font-size: 14px;
+  }
+
+  .contact-form h2 {
+    font-size: 20px;
+  }
+
+  .aboutimage,
+  .skill-content img {
+    width: 100%;
+  }
+}
+
